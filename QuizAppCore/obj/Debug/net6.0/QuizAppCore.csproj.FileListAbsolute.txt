@@ -1,0 +1,12 @@
+X:\Apps\QuizApp\QuizAppCore\bin\Debug\net6.0\QuizAppCore.deps.json
+X:\Apps\QuizApp\QuizAppCore\bin\Debug\net6.0\QuizAppCore.dll
+X:\Apps\QuizApp\QuizAppCore\bin\Debug\net6.0\QuizAppCore.pdb
+X:\Apps\QuizApp\QuizAppCore\obj\Debug\net6.0\QuizAppCore.GeneratedMSBuildEditorConfig.editorconfig
+X:\Apps\QuizApp\QuizAppCore\obj\Debug\net6.0\QuizAppCore.AssemblyInfoInputs.cache
+X:\Apps\QuizApp\QuizAppCore\obj\Debug\net6.0\QuizAppCore.AssemblyInfo.cs
+X:\Apps\QuizApp\QuizAppCore\obj\Debug\net6.0\QuizAppCore.csproj.CoreCompileInputs.cache
+X:\Apps\QuizApp\QuizAppCore\obj\Debug\net6.0\QuizAppCore.dll
+X:\Apps\QuizApp\QuizAppCore\obj\Debug\net6.0\refint\QuizAppCore.dll
+X:\Apps\QuizApp\QuizAppCore\obj\Debug\net6.0\QuizAppCore.pdb
+X:\Apps\QuizApp\QuizAppCore\obj\Debug\net6.0\ref\QuizAppCore.dll
+X:\Apps\QuizApp\QuizAppCore\obj\Debug\net6.0\QuizAppCore.csproj.AssemblyReference.cache

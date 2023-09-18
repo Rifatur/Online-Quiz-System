@@ -1,0 +1,17 @@
+X:\Apps\QuizApp\QuizAppInfrastructure\bin\Debug\net6.0\QuizAppDataAccess.deps.json
+X:\Apps\QuizApp\QuizAppInfrastructure\bin\Debug\net6.0\QuizAppDataAccess.runtimeconfig.json
+X:\Apps\QuizApp\QuizAppInfrastructure\bin\Debug\net6.0\QuizAppDataAccess.dll
+X:\Apps\QuizApp\QuizAppInfrastructure\bin\Debug\net6.0\QuizAppDataAccess.pdb
+X:\Apps\QuizApp\QuizAppInfrastructure\bin\Debug\net6.0\QuizAppCore.dll
+X:\Apps\QuizApp\QuizAppInfrastructure\bin\Debug\net6.0\QuizAppCore.pdb
+X:\Apps\QuizApp\QuizAppInfrastructure\obj\Debug\net6.0\QuizAppDataAccess.csproj.AssemblyReference.cache
+X:\Apps\QuizApp\QuizAppInfrastructure\obj\Debug\net6.0\QuizAppDataAccess.GeneratedMSBuildEditorConfig.editorconfig
+X:\Apps\QuizApp\QuizAppInfrastructure\obj\Debug\net6.0\QuizAppDataAccess.AssemblyInfoInputs.cache
+X:\Apps\QuizApp\QuizAppInfrastructure\obj\Debug\net6.0\QuizAppDataAccess.AssemblyInfo.cs
+X:\Apps\QuizApp\QuizAppInfrastructure\obj\Debug\net6.0\QuizAppDataAccess.csproj.CoreCompileInputs.cache
+X:\Apps\QuizApp\QuizAppInfrastructure\obj\Debug\net6.0\QuizAppDataAccess.csproj.CopyComplete
+X:\Apps\QuizApp\QuizAppInfrastructure\obj\Debug\net6.0\QuizAppDataAccess.dll
+X:\Apps\QuizApp\QuizAppInfrastructure\obj\Debug\net6.0\refint\QuizAppDataAccess.dll
+X:\Apps\QuizApp\QuizAppInfrastructure\obj\Debug\net6.0\QuizAppDataAccess.pdb
+X:\Apps\QuizApp\QuizAppInfrastructure\obj\Debug\net6.0\QuizAppDataAccess.genruntimeconfig.cache
+X:\Apps\QuizApp\QuizAppInfrastructure\obj\Debug\net6.0\ref\QuizAppDataAccess.dll
