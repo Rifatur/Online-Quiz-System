@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using QuizAppDataAccess.Context;
+using QuizAppDataAccess.Services.Implemantations;
+using QuizAppDataAccess.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DataConnection"));
 });
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 builder.Services.AddControllersWithViews();
 
