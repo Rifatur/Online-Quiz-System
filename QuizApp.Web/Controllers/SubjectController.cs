@@ -12,9 +12,10 @@ namespace QuizApp.Web.Controllers
         {
             _SubjectRepository = SubjectRepository;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var Subject = await _SubjectRepository.GetAllAsync();
+            return View(Subject);
         }
         public IActionResult Create()
         {
@@ -31,5 +32,7 @@ namespace QuizApp.Web.Controllers
             }
             return View(subject);
         }
+
+
     }
 }
