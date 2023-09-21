@@ -1,4 +1,13 @@
-﻿
+﻿@using QuizAppCore.Entities;
+@{
+    
+    var subjects = ViewData["Subjects"] as List<Subject>;
+    
+}
+@{
+    ViewData["Title"] = "Quiz";
+}
+
 <div class="pagetitle">
     <h1>Quiz</h1>
     <nav>
@@ -57,7 +66,9 @@
         </div>
     </div>
 </section>
+
 <!-- Start Modal-->
+<form class="row g-3" method="post" asp-controller="Quiz" asp-action="Index">
 <div class="modal fade" id="basicModal" tabindex="-1">
     <div class="modal-dialog  modal-lg">
         <div class="modal-content">
@@ -65,13 +76,44 @@
                 <h5 class="modal-title">Create Quiz</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-warning " data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            <!-- Floating Labels Form -->
+            
+                <div class="modal-body">
+                    
+                        <div class="col-md-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="floatingName" placeholder="Your Name" name="Title">
+                                <label for="floatingName">Quiz Title</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <select class="form-select" id="floatingSelect" aria-label="Subject" name="SubjectId">
+                                    <option selected></option>
+                                    @foreach (var std in subjects)
+                                    {
+                                        <option value="@std.SubjectId">@std.Name</option>
+                                    }
+
+
+                                </select>
+                                <label for="floatingSelect">Select a Subject</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="floatingDuration" placeholder="Duration" name="DurationMinutes">
+                                <label for="floatingDuration">Duration</label>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-warning " data-bs-dismiss="modal">Close</button>
+                    <input type="submit" value="Save Quiz" class="btn btn-primary" />
+              
+                </div>
+            
         </div>
     </div>
 </div><!-- End  Modal-->
+</form><!-- End floating Labels Form -->
