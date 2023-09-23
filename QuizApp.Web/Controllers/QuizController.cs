@@ -20,14 +20,14 @@ namespace QuizApp.Web.Controllers
         public async Task<IActionResult> Index()
         {
             List<Subject> Subjects = await _context.Subjects.ToListAsync();
-            ViewData["Subjects"] = Subjects;
+            ViewBag.Subjects = Subjects;
 
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Index(Quiz quiz)
+        public async Task<IActionResult> CreateQuiz(Quiz quiz)
         {
             if (ModelState.IsValid)
             {

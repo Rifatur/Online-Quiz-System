@@ -1,11 +1,8 @@
 ﻿@using QuizAppCore.Entities;
 @{
     
-    var subjects = ViewData["Subjects"] as List<Subject>;
+    var subjects = ViewBag.Subjects as List<Subject>;
     
-}
-@{
-    ViewData["Title"] = "Quiz";
 }
 
 <div class="pagetitle">
@@ -68,7 +65,7 @@
 </section>
 
 <!-- Start Modal-->
-<form class="row g-3" method="post" asp-controller="Quiz" asp-action="Index">
+
 <div class="modal fade" id="basicModal" tabindex="-1">
     <div class="modal-dialog  modal-lg">
         <div class="modal-content">
@@ -77,43 +74,79 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <!-- Floating Labels Form -->
-            
+            <form class="row g-3" id="createForm">
+                
                 <div class="modal-body">
                     
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="floatingName" placeholder="Your Name" name="Title">
-                                <label for="floatingName">Quiz Title</label>
+                            <input type="text" class="form-control" id="Title" placeholder="Your Name" name="Title">
+                            <label for="Title">Quiz Title</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <select class="form-select" id="floatingSelect" aria-label="Subject" name="SubjectId">
+                            <select class="form-select" id="SubjectId" aria-label="Subject" name="SubjectId">
                                     <option selected></option>
+                                @if (subjects != null)
+                                {
                                     @foreach (var std in subjects)
                                     {
                                         <option value="@std.SubjectId">@std.Name</option>
                                     }
 
+                                }
 
                                 </select>
-                                <label for="floatingSelect">Select a Subject</label>
+                            <label for="SubjectId">Select a Subject</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="floatingDuration" placeholder="Duration" name="DurationMinutes">
-                                <label for="floatingDuration">Duration</label>
+                                <input type="text" class="form-control" id="Duration" placeholder="Duration" name="DurationMinutes">
+                            <label for="Duration">Duration</label>
                             </div>
                         </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-warning " data-bs-dismiss="modal">Close</button>
-                    <input type="submit" value="Save Quiz" class="btn btn-primary" />
+                    <button type="submit" class="btn btn-primary">Create</button>
+                    @* <input type="submit" value="Save Quiz" class="btn btn-primary" /> *@
               
                 </div>
+            </form><!-- End floating Labels Form -->
             
         </div>
     </div>
 </div><!-- End  Modal-->
-</form><!-- End floating Labels Form -->
+
+<script>
+    
+    $(document).ready(function () {
+        $('#createForm').submit(function (e) {
+            e.preventDefault();
+
+
+         
+            $.ajax({
+                type: 'POST',
+                url: "@Url.Action("CreateQuiz","Quiz")",
+                contentType: 'application/x-www-form-urlencoded;charset=UTF-8',
+                    data: {
+                        "Title": $("#Title").val(),
+                        "SubjectId": $("#SubjectId").val(),
+                        "DurationMinutes": $("#Duration").val()
+                    },
+                success: function (data) {
+                    // Handle the success response
+                    console.log(data);
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    // Handle the error response
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+    });
+
+</script>
